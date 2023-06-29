@@ -40,7 +40,7 @@ const Login = () => {
         dispatch(setLoginStatus({ isChecking: false, isLogin: true }));
         toast.success("Đăng nhập thành công");
       })
-      .catch((err) => {})
+      .catch((err) => {return toast.error("Email or password is not correct");})
       .finally(() => setLoading(false));
   };
   return (
